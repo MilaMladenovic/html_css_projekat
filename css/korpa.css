@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  /* font-style: italic; */
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size:42px;
+  font-style: italic;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #F8F5EF;
+    color: #3A2E27;
+}

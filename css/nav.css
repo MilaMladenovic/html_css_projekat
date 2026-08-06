@@ -1,0 +1,31 @@
+nav {
+  background-color: #F8F5EF;
+}
+
+nav img {
+  height: 180px;
+}
+
+.link {
+  color: #3A2E27;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.link:hover {
+  color: #C98A3D;
+  text-decoration: underline;
+  font-size: 19px;
+}
+
+
