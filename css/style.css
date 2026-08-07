@@ -9,30 +9,27 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
-  /* font-style: italic; */
 }
 
 h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size:42px;
+  font-size: 42px;
   font-style: italic;
 }
 
 body {
-    font-family: "Manrope", sans-serif;
-    /* background-color: #F8F5EF; */
-    background-color: #3A2E27;
-    color: #3A2E27;
+  font-family: "Manrope", sans-serif;
+  background-color: #f8f5ef;
+  color: #3a2e27;
 }
 
 /* HERO SEKCIJA */
 
 .hero-sekcija {
-  background-image: url(http://127.0.0.1:5500/images/hero.png);
+  background-image: url(../images/hero.png);
   background-size: cover;
   background-position: center;
   padding: 100px;
-
 }
 
 .hero-content {
@@ -41,7 +38,7 @@ body {
   padding: 40px;
   width: 60%;
   background-color: #f8f5efdd;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 .hero-slika img {
@@ -52,8 +49,8 @@ body {
 
 .pogledajte-ponudu-dugme {
   background-color: transparent;
-  border: 2px solid #3A2E27;
-  color: #3A2E27;
+  border: 2px solid #3a2e27;
+  color: #3a2e27;
   font-size: 14px;
   text-transform: uppercase;
   margin: 20px auto;
@@ -64,16 +61,137 @@ body {
 }
 
 .pogledajte-ponudu-dugme:hover {
-  background-image: linear-gradient(135deg, #8B5E34, #A66F3E, #C98A3D);
+  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
   transform: translateY(-2px);
-  color: #F8F5EF;
-  border: none;
+  color: #f8f5ef;
+  border-color: transparent;
+}
+
+/* KATEGORIJE SEKCIJA */
+
+.kategorije-sekcija {
+  background-color: #efe7db;
+  padding: 50px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  position: relative;
+}
+
+.kategorije-content {
+  position: sticky;
+  align-self: start;
+  top: 50px;
+  margin: 20px;
+}
+
+.kategorije-content h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.kategorije-content p {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.sva-peciva-dugme {
+  background-color: transparent;
+  border: 2px solid #3a2e27;
+  color: #3a2e27;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  padding: 12px 36px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sva-peciva-dugme:hover {
+  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  transform: translateY(-2px);
+  color: #f8f5ef;
+  border-color: transparent;
+}
+
+.kategorije-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+}
+
+.kategorija {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.kategorija img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.kategorija:hover img {
+  transform: scale(1.05);
+}
+
+.kategorija-gradijent {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(
+    to top,
+    #3a2e27,
+    #3a2e2795,
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+}
+
+.srpski-naziv {
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+  right: 80px;
+  color: #efe7db;
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  max-width: 200px;
+  margin: 0;
+  z-index: 2;
+}
+
+.srpski-naziv:hover {
+  text-decoration: underline;
+}
+
+.francuski-naziv {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-family: "Cormorant Garamond", serif;
+  color: #efe7dbc0;
+  font-size: 32px;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+  z-index: 2;
 }
 
 /*  SEKCIJA */
-
-/*  SEKCIJA */
-
 
 /*  SEKCIJA */
 
