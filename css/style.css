@@ -10,7 +10,6 @@ h1 {
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.05;
-
 }
 
 h2 {
@@ -22,9 +21,9 @@ h2 {
 }
 
 h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 32px;
-    font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 body {
@@ -84,7 +83,7 @@ body {
 
 .kategorije-sekcija {
   background-color: #efe7db;
-  padding: 50px 30px;
+  padding: 100px 50px;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   position: relative;
@@ -204,7 +203,7 @@ body {
 
 .o-nama-sekcija {
   background-color: #efe7db;
-  padding: 50px 30px;
+  padding: 100px 50px;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 50px;
@@ -215,6 +214,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .o-nama-content {
@@ -224,7 +224,7 @@ body {
   margin: 0px 30px;
 }
 
-.o-nama-content  h2 {
+.o-nama-content h2 {
   margin-bottom: 50px;
 }
 
@@ -253,8 +253,31 @@ body {
   border-color: transparent;
 }
 
+/*CITAT SEKCIJA */
 
-/*  SEKCIJA */
+.citat-sekcija {
+  /* background-color: #8b5e34; */
+    background-image: linear-gradient(125deg, #8b5e34, #a66f3e, #c98a3d);
+  padding: 80px 280px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  text-align: center;
+}
+
+.citat-francuski {
+  color: #f8f5ef91;
+}
+
+.citat-srpski-prevod {
+  color: #f8f5ef;
+  font-weight: bold;
+}
+
+.autor-citata {
+  color: #f8f5ef91;
+  font-size: 28px;
+}
+
 
 /*  SEKCIJA */
 
