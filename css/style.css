@@ -9,18 +9,31 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
+  line-height: 1.05;
+
 }
 
 h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 42px;
+  font-size: 48px;
   font-style: italic;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 body {
   font-family: "Manrope", sans-serif;
   background-color: #f8f5ef;
   color: #3a2e27;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 /* HERO SEKCIJA */
@@ -71,7 +84,7 @@ body {
 
 .kategorije-sekcija {
   background-color: #efe7db;
-  padding: 50px 25px;
+  padding: 50px 30px;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   position: relative;
@@ -82,17 +95,13 @@ body {
   align-self: start;
   top: 50px;
   margin: 20px;
-}
-
-.kategorije-content h2 {
-  font-size: 48px;
-  font-weight: 900;
+  max-width: 500px;
 }
 
 .kategorije-content p {
-  font-size: 22px;
-  font-style: italic;
   margin-top: 50px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .sva-peciva-dugme {
@@ -191,7 +200,59 @@ body {
   z-index: 2;
 }
 
-/*  SEKCIJA */
+/* O NAMA SEKCIJA */
+
+.o-nama-sekcija {
+  background-color: #efe7db;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  position: relative;
+}
+
+.o-nama-sekcija img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.o-nama-content {
+  position: sticky;
+  align-self: start;
+  top: 50px;
+  margin: 0px 30px;
+}
+
+.o-nama-content  h2 {
+  margin-bottom: 50px;
+}
+
+.o-nama-content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.saznaj-vise-dugme {
+  background-color: transparent;
+  border: 2px solid #3a2e27;
+  color: #3a2e27;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  padding: 12px 36px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.saznaj-vise-dugme:hover {
+  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  transform: translateY(-2px);
+  color: #f8f5ef;
+  border-color: transparent;
+}
+
 
 /*  SEKCIJA */
 

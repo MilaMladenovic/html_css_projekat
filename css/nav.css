@@ -7,9 +7,31 @@ nav img {
 }
 
 .link {
+  position: relative;
   color: #3A2E27;
   text-decoration: none;
   font-size: 18px;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #C98A3D;
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  font-size: 20px;
+  color: #C98A3D;
+}
+
+.link:hover::after {
+  color: #C98A3D;
+  width: 100%;
 }
 
 .nav-links {
@@ -20,12 +42,6 @@ nav img {
   list-style: none;
   width: 60%;
   margin: 0 auto;
-}
-
-.link:hover {
-  color: #C98A3D;
-  text-decoration: underline;
-  font-size: 19px;
 }
 
 
