@@ -287,6 +287,7 @@ body {
 .best-seller-content {
   background-color: #fcfaf6;
   padding: 20px;
+  border-radius: 3px;
 }
 
 .best-seller-content h2 {
@@ -312,6 +313,7 @@ body {
   display: block;
   width: fit-content;
   margin: 30px auto;
+  color: #3a2e27;
 }
 
 .ponuda-link::after,
@@ -355,6 +357,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 550px;
+  border-radius: 3px;
 }
 
 .kartica img {
@@ -362,6 +365,7 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  border-radius: 3px;
 }
 
 .bestseller-overlay {
@@ -419,3 +423,145 @@ body {
 }
 
 /*ZASTO-BAS-MI SEKCIJA */
+
+.zasto-bas-mi-sekcija {
+  background-color: #efe7db;
+  padding: 30px 60px;
+}
+
+.zasto-bas-mi-content {
+  padding: 50px;
+  border-radius: 3px;
+}
+
+.uvodni-tekst {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.uvodni-tekst h2 {
+  font-style: normal;
+  text-align: center;
+}
+
+.uvodni-tekst p {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.zasto-bas-mi-grid {
+  margin: 60px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.zasto-bas-mi-kartice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.razlog-kartica {
+  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  color: #F8F5EF;
+
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.razlog-kartica:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.razlog-kartica:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.razlog-kartica:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.razlog-kartica:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.razlog-kartica h3 {
+  font-style: italic;
+}
+
+.naslov-kartice {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.razlog-kartica p {
+  padding: 0 55px;
+}
+
+
+.razlog-kartica .material-symbols-outlined {
+  font-size: 36px;
+}
+
+.razlog-kartica .material-symbols-rounded {
+  font-size: 36px;
+}
+
+.zasto-bas-mi-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 3px;
+
+  animation: slideInRight 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  form {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
