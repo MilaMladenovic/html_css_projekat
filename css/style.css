@@ -544,6 +544,85 @@ body {
   'opsz' 48
 }
 
+
+/*PREPORUKE SEKCIJA */
+
+.preporuke-sekcija {
+  background-color: #efe7db;
+  padding: 30px 60px;
+}
+
+.preporuke-content {
+  padding: 50px;
+  border-radius: 3px;
+}
+
+.preporuke-header {
+  text-align: center;
+
+}
+
+.preporuke-header h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.preporuke-header h3 {
+  color: #7C6D63;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-style: italic;
+}
+
+.preporuke-header p {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.preporuke-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.preporuka {
+  background-color: #FCFAF6;
+  width: 100%;
+  height: 250px;
+  padding: 30px;
+  font-size: 14px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(58, 46, 39, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preporuka:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(58, 46, 39, 0.14);
+}
+
+.ime-kupca {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.zvezdice {
+  color: #c98a3d;
+  font-size: 20px;
+}
+
+.preporuka h4 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
