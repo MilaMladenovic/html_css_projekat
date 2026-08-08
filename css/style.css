@@ -15,9 +15,9 @@ h1 {
 h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 48px;
-  font-style: italic;
   font-weight: 600;
   line-height: 1.15;
+  font-style: italic;
 }
 
 h3 {
@@ -256,8 +256,7 @@ body {
 /*CITAT SEKCIJA */
 
 .citat-sekcija {
-  /* background-color: #8b5e34; */
-    background-image: linear-gradient(125deg, #8b5e34, #a66f3e, #c98a3d);
+  background-image: linear-gradient(125deg, #8b5e34, #a66f3e, #c98a3d);
   padding: 80px 280px;
   font-family: "Cormorant Garamond", serif;
   font-size: 38px;
@@ -278,7 +277,145 @@ body {
   font-size: 28px;
 }
 
+/*BEST-SELLER SEKCIJA */
 
-/*  SEKCIJA */
+.best-seller-sekcija {
+  background-color: #efe7db;
+  padding: 100px 50px;
+}
 
-/*  SEKCIJA */
+.best-seller-content {
+  background-color: #fcfaf6;
+  padding: 20px;
+}
+
+.best-seller-content h2 {
+  text-align: center;
+  margin: 20px 0 30px;
+  font-style: normal;
+}
+
+.best-seller-content > p {
+  max-width: 650px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.ponuda-link,
+.bestseller-link {
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+}
+
+.ponuda-link {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.ponuda-link::after,
+.bestseller-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #c98a3d;
+  transition: width 0.3s ease;
+}
+
+.bestseller-link {
+  font-family: "Manrope", sans-serif;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ponuda-link:hover,
+.bestseller-link:hover {
+  color: #c98a3d;
+}
+
+.ponuda-link:hover::after,
+.bestseller-link:hover::after {
+  width: 100%;
+}
+
+.svi-best-selleri {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 80px auto;
+}
+
+.kartica {
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+}
+
+.kartica img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.bestseller-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 27, 22, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bestseller-info {
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  max-width: 400px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.kartica:hover .bestseller-overlay {
+  opacity: 1;
+}
+
+.kartica:hover .bestseller-info {
+  transform: translateY(0);
+}
+
+.kartica:hover img {
+  transform: scale(1.04);
+}
+
+.bestseller-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.bestseller-info span {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.bestseller-info p {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 22px auto;
+}
+
+/*ZASTO-BAS-MI SEKCIJA */
