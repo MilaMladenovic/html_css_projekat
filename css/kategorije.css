@@ -9,16 +9,228 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
+  line-height: 1.05;
 }
 
 h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size:42px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.15;
   font-style: italic;
 }
 
-body {
-    font-family: "Manrope", sans-serif;
-    background-color: #F8F5EF;
-    color: #3A2E27;
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 600;
 }
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #f8f5ef;
+  color: #3a2e27;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* KATEGORIJE SEKCIJA */
+
+.kategorije-sekcija {
+  background-color: #efe7db;
+  padding: 100px 60px;
+}
+
+
+/* UVOD */
+
+.kategorije-header {
+  max-width: 750px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.kategorije-header h1 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.kategorije-header p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #7c6d63;
+}
+
+
+/* GRID */
+
+.kategorije-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+
+.kategorija-kartica {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: block;
+  color: #f8f5ef;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+
+.kategorija-kartica img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.kategorija-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to top,
+      rgba(35, 27, 22, 0.85) 0%,
+      rgba(35, 27, 22, 0.35) 45%,
+      rgba(35, 27, 22, 0.05) 100%
+    );
+
+  transition:
+    background 0.5s ease;
+}
+
+
+
+.kategorija-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 45px;
+  z-index: 2;
+}
+
+
+
+.kategorija-info > span {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  opacity: 0.75;
+}
+
+
+
+.kategorija-info h2 {
+  margin: 0 0 12px;
+  font-size: 42px;
+  font-style: normal;
+
+  color: #f8f5ef;
+}
+
+
+
+.kategorija-info p {
+  max-width: 500px;
+  margin: 0 0 22px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(248, 245, 239, 0.85);
+}
+
+
+.kategorija-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #f8f5ef;
+}
+
+
+
+.kategorija-link i {
+  transition: transform 0.3s ease;
+}
+
+.kategorija-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1px;
+  background: #c98a3d;
+  transition: width 0.3s ease;
+}
+
+
+.kategorija-kartica:hover img {
+  transform: scale(1.05);
+}
+
+.kategorija-kartica:hover .kategorija-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(35, 27, 22, 0.9) 0%,
+      rgba(35, 27, 22, 0.5) 55%,
+      rgba(35, 27, 22, 0.15) 100%
+    );
+}
+
+.kategorija-kartica:hover .kategorija-link {
+  color: #c98a3d;
+}
+
+.kategorija-kartica:hover .kategorija-link i {
+  transform: translateX(6px);
+}
+
+.kategorija-link:hover::after  {
+  width: 100%;
+}
+
+
+/* RESPONSIVE
+
+@media (max-width: 800px) {
+
+  .kategorije-sekcija {
+    padding: 70px 25px;
+  }
+
+  .kategorije-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kategorija-kartica {
+    height: 450px;
+  }
+
+  .kategorija-info {
+    padding: 30px;
+  }
+
+  .kategorija-info h2 {
+    font-size: 36px;
+  }
+} */
