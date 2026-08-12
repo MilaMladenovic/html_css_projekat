@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,11 +24,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="css/prijava.css" />
+    <link rel="stylesheet" href="css/registracija.css" />
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/footer.css" />
   </head>
-  <body>
+  <body class="prijava-body">
     <header>
       <nav>
         <ul class="nav-links">
@@ -57,69 +56,30 @@
         </ul>
       </nav>
     </header>
-    <footer>
-      <div class="footer-hero">
-        <div class="background-overlay"></div>
-        <div class="footer-hero-content">
-          <h3>Mali deo Francuske, svakog dana.</h3>
+    
 
-          <a class="footer-ponuda-link" href="proizvodi.html"
-            >OTKRIJTE NAŠU PONUDU <i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </div>
+    <section class="registracija-section">
+      <h2 class="registracija-naslov">Prijavi se</h2>
+      <div class="form-container">
+
+        <form>
+          <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" name="email" placeholder="Unesite Vas email" required><br>
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="lozinka" placeholder="Unesite lozinku" required><br>
+          </div>
+
+          <button class="dugme-submit">Prijavi se</button>
+        </form>
+
+        <p>Nemate nalog? <a class="prijava-link" href="registracija.html">Kliknite ovde.</a></p>
+
+
       </div>
-
-      <div class="footer-linkovi">
-        <div class="footer-linkovi-content">
-          <div class="footer-kolona">
-            <h4>Baget & Kroasan</h4>
-            <p>
-              Tradicija francuskog pekarstva,<br />
-              svakog dana sveže pripremljena.
-            </p>
-          </div>
-
-          <div class="footer-kolona">
-            <h4>Brzi linkovi</h4>
-            <a href="index.html">Početna</a>
-            <a href="proizvodi.html">Ponuda</a>
-            <a href="o-nama.html">O nama</a>
-            <a href="kontakt.html">Kontakt</a>
-          </div>
-
-          <div class="footer-kolona">
-            <h4>Posetite nas</h4>
-            <p>Beograd, Srbija</p>
-            <p>Pon–Pet: 07:00–20:00</p>
-            <p>Sub–Ned: 08:00–18:00</p>
-          </div>
-
-          <div class="footer-kolona">
-            <h4>Pratite nas</h4>
-            <a href="https://www.instagram.com/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i> Instagram</a
-            >
-            <a href="https://www.facebook.com/" target="_blank"
-              ><i class="fa-brands fa-square-facebook"></i> Facebook</a
-            >
-            >
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-signature">
-        <div class="footer-logo">
-          <img src="images/footer-logo.png" alt="Baget & Kroasan logo" />
-        </div>
-
-        <p class="footer-moto">Umetnost dobrog hleba, svakog dana.</p>
-
-        <div class="footer-bottom">
-          <p>© 2026 Baget & Kroasan. Sva prava zadržana.</p>
-
-          <a href="#">Politika privatnosti</a>
-        </div>
-      </div>
-    </footer>
+    </section>
   </body>
 </html>
