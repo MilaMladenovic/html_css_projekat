@@ -218,8 +218,6 @@ body {
 }
 
 .o-nama-content {
-  position: sticky;
-  align-self: start;
   top: 50px;
   margin: 0px 30px;
 }

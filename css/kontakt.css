@@ -9,17 +9,365 @@ h1 {
   font-size: 48px;
   font-weight: 800;
   text-transform: uppercase;
-  /* font-style: italic; */
+  line-height: 1.05;
 }
 
 h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size:42px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.15;
   font-style: italic;
 }
 
-body {
-    font-family: "Manrope", sans-serif;
-    background-color: #F8F5EF;
-    color: #3A2E27;
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 600;
 }
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #f8f5ef;
+  color: #3a2e27;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+
+.kontakt-hero {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 800px 1fr;
+  color: #f8f5ef;
+  overflow: hidden;
+}
+
+.kontakt-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.kontakt-hero-content {
+  background-color: #8B5E34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kontakt-hero-content h1 {
+  margin-bottom: 15px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.kontakt-hero-content p {
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(248, 245, 239, 0.9);
+  max-width: 450px;
+}
+
+.kontakt-sekcija {
+  background-color: #efe7db;
+  padding: 150px 60px 120px;
+}
+
+.kontakt-header {
+  max-width: 750px;
+  margin: 0 auto 90px;
+  text-align: center;
+}
+
+.kontakt-mali-naslov {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #8b5e34;
+  margin-bottom: 15px;
+}
+
+.kontakt-header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.kontakt-header > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #7c6d63;
+  font-size: 16px;
+}
+
+.kontakt-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 100px;
+  align-items: start;
+}
+
+
+.kontakt-info {
+  padding: 20px 0;
+}
+
+.kontakt-blok {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(58, 46, 39, 0.15);
+}
+
+.kontakt-blok:first-child {
+  padding-top: 0;
+}
+
+.kontakt-blok i {
+  width: 25px;
+  font-size: 18px;
+  color: #c98a3d;
+  margin-top: 5px;
+}
+
+.kontakt-blok h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.kontakt-blok p {
+  font-size: 14px;
+  color: #7c6d63;
+  line-height: 1.7;
+}
+
+.kontakt-drustvene-mreze {
+  margin-top: 40px;
+}
+
+.kontakt-drustvene-mreze > p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.kontakt-drustvene-mreze div {
+  display: flex;
+  gap: 15px;
+}
+
+.kontakt-drustvene-mreze a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(58, 46, 39, 0.25);
+  border-radius: 50%;
+
+  color: #3a2e27;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.kontakt-drustvene-mreze a:hover {
+  background-color: #3a2e27;
+  color: #f8f5ef;
+  transform: translateY(-3px);
+}
+
+
+
+.kontakt-forma {
+  background-color: #fcfaf6;
+  padding: 50px;
+  border-radius: 3px;
+}
+
+.kontakt-forma h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.kontakt-forma > p {
+  font-size: 14px;
+  color: #7c6d63;
+  margin-bottom: 35px;
+}
+
+
+.forma-red {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+.forma-polje {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.forma-polje label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+}
+
+.forma-polje input,
+.forma-polje textarea {
+  width: 100%;
+
+  border: none;
+  border-bottom: 1px solid rgba(58, 46, 39, 0.3);
+
+  background-color: transparent;
+
+  padding: 12px 5px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #3a2e27;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.forma-polje textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.forma-polje input::placeholder,
+.forma-polje textarea::placeholder {
+  color: #a59b94;
+}
+
+.forma-polje input:focus,
+.forma-polje textarea:focus {
+  border-color: #c98a3d;
+}
+
+
+
+.kontakt-dugme {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  background-color: #3a2e27;
+  border: none;
+
+  color: #f8f5ef;
+
+  padding: 14px 25px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.kontakt-dugme i {
+  transition: transform 0.3s ease;
+}
+
+.kontakt-dugme:hover {
+  background-color: #8b5e34;
+  transform: translateY(-2px);
+}
+
+.kontakt-dugme:hover i {
+  transform: translateX(5px);
+}
+
+
+/* RESPONSIVE */
+/* 
+@media (max-width: 900px) {
+
+  .kontakt-sekcija {
+    padding: 120px 30px 80px;
+  }
+
+  .kontakt-header h1 {
+    font-size: 58px;
+  }
+
+  .kontakt-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .kontakt-forma {
+    padding: 35px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .kontakt-sekcija {
+    padding: 100px 20px 60px;
+  }
+
+  .kontakt-header {
+    margin-bottom: 60px;
+  }
+
+  .kontakt-header h1 {
+    font-size: 48px;
+  }
+
+  .forma-red {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .kontakt-forma {
+    padding: 25px;
+  }
+
+  .kontakt-forma h2 {
+    font-size: 36px;
+  }
+
+} */
