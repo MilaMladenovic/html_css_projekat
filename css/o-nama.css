@@ -49,6 +49,7 @@ body {
   justify-content: center;
   text-align: center;
   color: #f8f5ef;
+  padding: 0 20px;
 }
 
 .o-nama-hero-overlay {
@@ -114,7 +115,6 @@ body {
   margin-bottom: 35px;
 }
 
-
 .nasa-prica-slika {
   margin-top: 100px;
   height: 650px;
@@ -126,7 +126,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 /* NAS ZANAT */
 
@@ -192,7 +191,6 @@ body {
   text-transform: uppercase;
   color: #7c6d63;
 }
- 
 
 /* TAKE AWAY */
 
@@ -292,7 +290,6 @@ body {
   margin: 0 auto;
 }
 
-
 .galerija-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -315,7 +312,6 @@ body {
   transform: scale(1.04);
 }
 
-
 .galerija-1 {
   grid-row: span 2;
 }
@@ -333,7 +329,6 @@ body {
   height: 500px;
 }
 
-
 /* ZAVRSNA SEKCIJA */
 
 .o-nama-zavrsna {
@@ -350,36 +345,63 @@ body {
   color: #2b211d;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE DESIGN (BREAKPOINTS) ================= */
 
-/* @media (max-width: 900px) {
+/* do 1100px – manji laptop/tablet */
+@media (max-width: 1100px) {
+  .nasa-prica {
+    padding: 80px 50px;
+  }
 
+  .nas-zanat {
+    padding: 100px 5%;
+    gap: 50px;
+  }
+
+  .take-away-tekst {
+    padding: 60px;
+  }
+
+  .o-nama-galerija {
+    padding: 80px 50px;
+  }
+}
+
+/* do 850px – tablet / veći telefon */
+@media (max-width: 850px) {
   .o-nama-hero {
     height: 70vh;
   }
 
   .o-nama-hero-content h1 {
-    font-size: 58px;
+    font-size: 56px;
   }
 
   .nasa-prica {
-    padding: 90px 30px 0;
+    padding: 70px 30px;
   }
 
   .nasa-prica-slika {
     height: 450px;
+    margin-top: 60px;
   }
 
   .nas-zanat {
     grid-template-columns: 1fr;
-
-    padding: 90px 30px;
-
+    padding: 80px 30px;
     gap: 50px;
   }
 
   .zanat-slika {
-    height: 500px;
+    height: 450px;
+  }
+
+  .o-nama-quote {
+    padding: 100px 30px;
+  }
+
+  .quote-content p {
+    font-size: 36px;
   }
 
   .take-away {
@@ -387,16 +409,15 @@ body {
   }
 
   .take-away-slika {
-    min-height: 450px;
+    min-height: 400px;
   }
 
   .take-away-tekst {
-    padding: 80px 40px;
+    padding: 70px 40px;
   }
 
   .galerija-grid {
     grid-template-columns: 1fr;
-
     grid-template-rows: auto;
   }
 
@@ -406,62 +427,71 @@ body {
   .galerija-4 {
     grid-column: auto;
     grid-row: auto;
-
-    height: 400px;
+    height: 380px;
   }
 
+  .o-nama-zavrsna {
+    padding: 100px 30px;
+  }
 }
 
-
+/* do 600px – telefon */
 @media (max-width: 600px) {
-
   body {
     font-size: 16px;
   }
 
   .o-nama-hero-content h1 {
-    font-size: 48px;
+    font-size: 42px;
+  }
+
+  .o-nama-hero-content > p:last-child {
+    font-size: 22px;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .nasa-prica {
-    padding: 70px 20px 0;
+    padding: 50px 20px;
   }
 
   .nasa-prica-slika {
-    height: 350px;
-    margin-top: 50px;
+    height: 320px;
+    margin-top: 40px;
   }
 
   .nas-zanat {
-    padding: 70px 20px;
+    padding: 60px 20px;
   }
 
   .zanat-slika {
-    height: 350px;
+    height: 320px;
   }
 
   .o-nama-quote {
-    padding: 90px 20px;
+    padding: 80px 20px;
   }
 
   .quote-content p {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .quote-navodnik {
+    font-size: 70px;
   }
 
   .take-away-tekst {
-    padding: 70px 25px;
+    padding: 50px 25px;
   }
 
   .take-away-slika {
-    min-height: 350px;
+    min-height: 300px;
   }
 
   .o-nama-galerija {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
   .galerija-header {
@@ -469,11 +499,45 @@ body {
   }
 
   .galerija-slika {
-    height: 300px;
+    height: 280px;
   }
 
   .o-nama-zavrsna {
-    padding: 90px 20px;
+    padding: 80px 20px;
   }
-} */
+}
 
+/* do 380px – veoma mali telefoni */
+@media (max-width: 380px) {
+  .o-nama-hero-content h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .nasa-prica-slika {
+    height: 260px;
+  }
+
+  .zanat-slika {
+    height: 260px;
+  }
+
+  .quote-content p {
+    font-size: 24px;
+  }
+
+  .take-away-tekst {
+    padding: 40px 15px;
+  }
+
+  .galerija-slika {
+    height: 240px;
+  }
+
+  .o-nama-zavrsna {
+    padding: 60px 15px;
+  }
+}

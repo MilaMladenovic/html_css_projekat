@@ -35,7 +35,10 @@ body {
   line-height: 1.8;
 }
 
-/* PROIZVODI SEKCIJA */
+
+/* =========================================
+   PROIZVODI SEKCIJA
+========================================= */
 
 .proizvodi-sekcija {
   background-color: #efe7db;
@@ -60,17 +63,21 @@ body {
 .proizvodi-content > p {
   max-width: 650px;
   text-align: center;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 50px;
   color: #7c6d63;
 }
+
 .proizvodi-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px 30px;
   margin: 0 auto;
 }
 
-/* KARTICA PROIZVODA */
+
+/* =========================================
+   KARTICA PROIZVODA
+========================================= */
 
 .proizvod-kartica {
   display: flex;
@@ -78,7 +85,10 @@ body {
   background: transparent;
 }
 
-/* OMOTAC SLIKE I OVERLAY-A */
+
+/* =========================================
+   SLIKA I OVERLAY
+========================================= */
 
 .proizvod-slika-wrapper {
   position: relative;
@@ -100,17 +110,21 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.644);
   backdrop-filter: blur(2px);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   opacity: 0;
   transition: opacity 0.4s ease;
+
   padding: 30px;
 }
 
 .proizvod-hover-info {
   color: #fff;
   text-align: center;
+
   transform: translateY(20px);
   transition: transform 0.4s ease;
 }
@@ -132,6 +146,9 @@ body {
   color: rgba(248, 245, 239, 0.85);
 }
 
+
+/* HOVER */
+
 .proizvod-kartica:hover .proizvod-overlay {
   opacity: 1;
 }
@@ -144,11 +161,15 @@ body {
   transform: scale(1.03);
 }
 
-/* DONJI TEKST PROIZVODA */
+
+/* =========================================
+   DONJI TEKST PROIZVODA
+========================================= */
 
 .proizvod-info {
-  padding: 20px 5px 10px 5px;
+  padding: 20px 5px 10px;
   text-align: left;
+
   display: flex;
   flex-direction: column;
 }
@@ -167,4 +188,160 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: #8b5e34;
+}
+
+
+/* =========================================
+   TABLET
+   1100px i manje
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .proizvodi-sekcija {
+    padding: 80px 35px;
+  }
+
+  .proizvodi-content {
+    padding: 35px;
+  }
+
+  .proizvodi-grid {
+    gap: 35px 20px;
+  }
+
+  .proizvod-slika-wrapper {
+    height: 340px;
+  }
+
+  .proizvodi-content h2 {
+    font-size: 42px;
+  }
+
+}
+
+
+/* =========================================
+   MANJI TABLETI
+   850px i manje
+========================================= */
+
+@media (max-width: 850px) {
+
+  .proizvodi-sekcija {
+    padding: 60px 25px;
+  }
+
+  .proizvodi-content {
+    padding: 30px 25px;
+  }
+
+  .proizvodi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+
+  .proizvod-slika-wrapper {
+    height: 360px;
+  }
+
+  .proizvodi-content h2 {
+    font-size: 40px;
+  }
+
+  .proizvodi-content > p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILNI TELEFON
+   600px i manje
+========================================= */
+
+@media (max-width: 600px) {
+
+  .proizvodi-sekcija {
+    padding: 45px 15px;
+  }
+
+  .proizvodi-content {
+    padding: 30px 18px;
+  }
+
+  .proizvodi-content h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin: 10px 0 15px;
+  }
+
+  .proizvodi-content > p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+
+  .proizvodi-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .proizvod-slika-wrapper {
+    height: 400px;
+  }
+
+  .proizvod-info {
+    padding: 15px 3px 5px;
+  }
+
+  .proizvod-info h3 {
+    font-size: 15px;
+  }
+
+  .proizvod-info span {
+    font-size: 13px;
+  }
+
+  .proizvod-overlay {
+    padding: 25px;
+  }
+
+  .hover-francuski-naziv {
+    font-size: 16px;
+  }
+
+  .hover-tekst {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   VEOMA MALI TELEFONI
+   400px i manje
+========================================= */
+
+@media (max-width: 400px) {
+
+  .proizvodi-sekcija {
+    padding: 35px 10px;
+  }
+
+  .proizvodi-content {
+    padding: 25px 15px;
+  }
+
+  .proizvodi-content h2 {
+    font-size: 30px;
+  }
+
+  .proizvod-slika-wrapper {
+    height: 340px;
+  }
+
 }

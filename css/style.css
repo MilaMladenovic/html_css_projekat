@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+/* =========================================
+   GLOBALNI STILOVI
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #f8f5ef;
+  color: #3a2e27;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 48px;
@@ -26,16 +44,10 @@ h3 {
   font-weight: 600;
 }
 
-body {
-  font-family: "Manrope", sans-serif;
-  background-color: #f8f5ef;
-  color: #3a2e27;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.8;
-}
 
-/* HERO SEKCIJA */
+/* =========================================
+   HERO SEKCIJA
+========================================= */
 
 .hero-sekcija {
   background-image: url(../images/hero.png);
@@ -46,7 +58,7 @@ body {
 
 .hero-content {
   text-align: center;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 40px;
   width: 60%;
   background-color: #f8f5efdd;
@@ -70,16 +82,29 @@ body {
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background-image 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .pogledajte-ponudu-dugme:hover {
-  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  background-image: linear-gradient(
+    135deg,
+    #8b5e34,
+    #a66f3e,
+    #c98a3d
+  );
   transform: translateY(-2px);
   color: #f8f5ef;
   border-color: transparent;
 }
 
-/* KATEGORIJE SEKCIJA */
+
+/* =========================================
+   KATEGORIJE SEKCIJA
+========================================= */
 
 .kategorije-sekcija {
   background-color: #efe7db;
@@ -114,10 +139,20 @@ body {
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background-image 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .sva-peciva-dugme:hover {
-  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  background-image: linear-gradient(
+    135deg,
+    #8b5e34,
+    #a66f3e,
+    #c98a3d
+  );
   transform: translateY(-2px);
   color: #f8f5ef;
   border-color: transparent;
@@ -152,16 +187,18 @@ body {
 
 .kategorija-gradijent {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 250px;
+
   background-image: linear-gradient(
     to top,
     #3a2e27,
     #3a2e2795,
     rgba(255, 255, 255, 0)
   );
+
   z-index: 1;
 }
 
@@ -170,12 +207,14 @@ body {
   bottom: 35px;
   left: 15px;
   right: 80px;
+
   color: #efe7db;
   text-align: left;
   font-size: 24px;
   line-height: 1.2;
   text-transform: uppercase;
   text-decoration: none;
+
   max-width: 200px;
   margin: 0;
   z-index: 2;
@@ -189,17 +228,22 @@ body {
   position: absolute;
   bottom: 5px;
   right: 5px;
+
   font-family: "Cormorant Garamond", serif;
   color: #efe7dbc0;
   font-size: 32px;
   padding: 10px;
+
   font-weight: bold;
   font-style: italic;
   margin: 0;
   z-index: 2;
 }
 
-/* O NAMA SEKCIJA */
+
+/* =========================================
+   O NAMA SEKCIJA
+========================================= */
 
 .o-nama-sekcija {
   background-color: #efe7db;
@@ -219,7 +263,7 @@ body {
 
 .o-nama-content {
   top: 50px;
-  margin: 0px 30px;
+  margin: 0 30px;
 }
 
 .o-nama-content h2 {
@@ -242,20 +286,41 @@ body {
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background-image 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .saznaj-vise-dugme:hover {
-  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
+  background-image: linear-gradient(
+    135deg,
+    #8b5e34,
+    #a66f3e,
+    #c98a3d
+  );
   transform: translateY(-2px);
   color: #f8f5ef;
   border-color: transparent;
 }
 
-/*CITAT SEKCIJA */
+
+/* =========================================
+   CITAT SEKCIJA
+========================================= */
 
 .citat-sekcija {
-  background-image: linear-gradient(125deg, #8b5e34, #a66f3e, #c98a3d);
+  background-image: linear-gradient(
+    125deg,
+    #8b5e34,
+    #a66f3e,
+    #c98a3d
+  );
+
   padding: 80px 280px;
+
   font-family: "Cormorant Garamond", serif;
   font-size: 38px;
   text-align: center;
@@ -275,7 +340,10 @@ body {
   font-size: 28px;
 }
 
-/*BEST-SELLER SEKCIJA */
+
+/* =========================================
+   BEST-SELLER SEKCIJA
+========================================= */
 
 .best-seller-sekcija {
   background-color: #efe7db;
@@ -369,10 +437,13 @@ body {
 .bestseller-overlay {
   position: absolute;
   inset: 0;
+
   background: rgba(35, 27, 22, 0.72);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -382,6 +453,7 @@ body {
   text-align: center;
   padding: 30px;
   max-width: 400px;
+
   transform: translateY(20px);
   transition: transform 0.4s ease;
 }
@@ -420,7 +492,10 @@ body {
   margin: 22px auto;
 }
 
-/*ZASTO-BAS-MI SEKCIJA */
+
+/* =========================================
+   ZAŠTO BAŠ MI SEKCIJA
+========================================= */
 
 .zasto-bas-mi-sekcija {
   background-color: #efe7db;
@@ -463,9 +538,14 @@ body {
 }
 
 .razlog-kartica {
-  background-image: linear-gradient(135deg, #8b5e34, #a66f3e, #c98a3d);
-  color: #f8f5ef;
+  background-image: linear-gradient(
+    135deg,
+    #8b5e34,
+    #a66f3e,
+    #c98a3d
+  );
 
+  color: #f8f5ef;
   border-radius: 15px;
   width: 100%;
   padding: 20px;
@@ -505,10 +585,7 @@ body {
   padding: 0 55px;
 }
 
-.razlog-kartica .material-symbols-outlined {
-  font-size: 36px;
-}
-
+.razlog-kartica .material-symbols-outlined,
 .razlog-kartica .material-symbols-rounded {
   font-size: 36px;
 }
@@ -523,14 +600,7 @@ body {
   opacity: 0;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-    "FILL" 1,
-    "wght" 300,
-    "GRAD" 200,
-    "opsz" 48;
-}
-
+.material-symbols-outlined,
 .material-symbols-rounded {
   font-variation-settings:
     "FILL" 1,
@@ -539,7 +609,10 @@ body {
     "opsz" 48;
 }
 
-/*PREPORUKE SEKCIJA */
+
+/* =========================================
+   PREPORUKE SEKCIJA
+========================================= */
 
 .preporuke-sekcija {
   background-color: #efe7db;
@@ -586,11 +659,14 @@ body {
 .preporuka {
   background-color: #fcfaf6;
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   padding: 30px;
+
   font-size: 14px;
+
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(58, 46, 39, 0.08);
+
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -618,11 +694,17 @@ body {
   font-weight: bold;
 }
 
+
+/* =========================================
+   ANIMACIJE
+========================================= */
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -634,8 +716,810 @@ body {
     opacity: 0;
     transform: translateX(60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   TABLET - DO 1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+  /* GLOBALNO */
+
+  body {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 29px;
+  }
+
+
+  /* HERO */
+
+  .hero-sekcija {
+    padding: 70px 50px;
+  }
+
+  .hero-content {
+    width: 75%;
+    padding: 35px;
+  }
+
+
+  /* KATEGORIJE */
+
+  .kategorije-sekcija {
+    padding: 70px 40px;
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .kategorije-grid {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .kategorija img {
+    height: 500px;
+  }
+
+  .srpski-naziv {
+    font-size: 20px;
+  }
+
+  .francuski-naziv {
+    font-size: 22px;
+  }
+
+
+  /* O NAMA */
+
+  .o-nama-sekcija {
+    padding: 70px 40px;
+    gap: 30px;
+  }
+
+  .o-nama-content {
+    margin: 0 15px;
+  }
+
+
+  /* CITAT */
+
+  .citat-sekcija {
+    padding: 70px 100px;
+    font-size: 34px;
+  }
+
+
+  /* BEST SELLER */
+
+  .best-seller-sekcija {
+    padding: 70px 40px;
+  }
+
+  .kartica {
+    height: 480px;
+  }
+
+  .bestseller-info h3 {
+    font-size: 31px;
+  }
+
+
+  /* ZAŠTO BAŠ MI */
+
+  .zasto-bas-mi-sekcija {
+    padding: 30px 40px;
+  }
+
+  .zasto-bas-mi-content {
+    padding: 0px;
+  }
+
+  .zasto-bas-mi-grid {
+    margin: 40px 0px;
+    gap: 18px;
+  }
+
+  .razlog-kartica p {
+    padding: 0 30px;
+    font-size: 12px;
+  }
+
+  .razlog-kartica h3 {
+    font-size: 20px;
+  }
+
+
+  /* PREPORUKE */
+
+  .preporuke-sekcija {
+    padding: 30px 40px;
+  }
+
+  .preporuke-content {
+    padding: 30px;
+  }
+
+  .preporuke-header h2 {
+    font-size: 44px;
+  }
+
+  .preporuka {
+    padding: 25px;
+  }
+}
+
+
+/* =========================================
+   TABLET / VEĆI TELEFONI - DO 850px
+========================================= */
+
+@media (max-width: 850px) {
+
+  /* GLOBALNO */
+
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+
+  /* HERO */
+
+  .hero-sekcija {
+    padding: 50px 25px;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+
+  /* KATEGORIJE */
+
+  .kategorije-sekcija {
+    display: block;
+    padding: 60px 25px;
+    grid-template-columns: 1fr;
+  }
+
+  .kategorije-content {
+    position: static;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  .kategorije-content p {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .sva-peciva-dugme {
+    margin-top: 30px;
+  }
+
+  .kategorije-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .kategorija img {
+    height: 450px;
+  }
+
+  .srpski-naziv {
+    font-size: 22px;
+    bottom: 25px;
+  }
+
+  .francuski-naziv {
+    font-size: 25px;
+  }
+
+
+  /* O NAMA */
+
+  .o-nama-sekcija {
+    padding: 60px 25px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .o-nama-content {
+    margin: 0;
+    text-align: center;
+    order: 1;
+  }
+
+  .o-nama-sekcija img {
+    order: 2;
+    max-height: 500px;
+  }
+
+  .o-nama-content h2 {
+    margin-bottom: 25px;
+  }
+
+  .o-nama-content p {
+    text-align: center;
+  }
+
+  .saznaj-vise-dugme {
+    margin-top: 30px;
+  }
+
+
+  /* CITAT */
+
+  .citat-sekcija {
+    padding: 60px 35px;
+    font-size: 30px;
+  }
+
+  .autor-citata {
+    font-size: 23px;
+  }
+
+
+  /* BEST SELLER */
+
+  .best-seller-sekcija {
+    padding: 60px 25px;
+  }
+
+  .best-seller-content {
+    padding: 15px;
+  }
+
+  .best-seller-content h2 {
+    margin: 20px 10px 25px;
+  }
+
+  .best-seller-content > p {
+    max-width: 600px;
+    padding: 0 10px;
+  }
+
+  .svi-best-selleri {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 50px auto;
+  }
+
+  .kartica {
+    height: 450px;
+  }
+
+  .bestseller-info {
+    padding: 20px;
+  }
+
+  .bestseller-info h3 {
+    font-size: 29px;
+  }
+
+  .bestseller-info p {
+    font-size: 14px;
+  }
+
+
+  /* ZAŠTO BAŠ MI */
+
+  .zasto-bas-mi-sekcija {
+    padding: 30px 25px;
+  }
+
+  .zasto-bas-mi-content {
+    padding: 20px 10px;
+  }
+
+  .uvodni-tekst {
+    margin: 20px auto;
+  }
+
+  .zasto-bas-mi-grid {
+    grid-template-columns: 1fr;
+    margin: 40px 0;
+    gap: 18px;
+  }
+
+  .zasto-bas-mi-kartice {
+    gap: 20px;
+  }
+
+  .razlog-kartica {
+    padding: 20px;
+  }
+
+  .razlog-kartica p {
+    padding: 0 20px;
+    font-size: 12px;
+  }
+
+  .razlog-kartica h3 {
+    font-size: 20px;
+  }
+
+  .zasto-bas-mi-content img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+
+  /* PREPORUKE */
+
+  .preporuke-sekcija {
+    padding: 30px 25px;
+  }
+
+  .preporuke-content {
+    padding: 20px 10px;
+  }
+
+  .preporuke-header h2 {
+    font-size: 38px;
+  }
+
+  .preporuke-header h3 {
+    font-size: 25px;
+  }
+
+  .preporuke-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .preporuka {
+    min-height: auto;
+    padding: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILNI TELEFON - DO 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* GLOBALNO */
+
+  body {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+
+  /* HERO */
+
+  .hero-sekcija {
+    min-height: 500px;
+    padding: 30px 15px;
+
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 25px 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .pogledajte-ponudu-dugme {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+
+
+  /* KATEGORIJE */
+
+  .kategorije-sekcija {
+    padding: 50px 15px;
+  }
+
+  .kategorije-content {
+    margin-bottom: 35px;
+  }
+
+  .kategorije-content p {
+    margin-top: 20px;
+  }
+
+  .sva-peciva-dugme {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+
+  .kategorije-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .kategorija img {
+    height: 420px;
+  }
+
+  .srpski-naziv {
+    font-size: 23px;
+    bottom: 25px;
+    left: 20px;
+  }
+
+  .francuski-naziv {
+    font-size: 25px;
+    right: 10px;
+  }
+
+
+  /* O NAMA */
+
+  .o-nama-sekcija {
+    padding: 50px 15px;
+    gap: 30px;
+  }
+
+  .o-nama-content h2 {
+    margin-bottom: 20px;
+  }
+
+  .o-nama-content p {
+    text-align: left;
+  }
+
+  .saznaj-vise-dugme {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+
+  .o-nama-sekcija img {
+    max-height: 400px;
+  }
+
+
+  /* CITAT */
+
+  .citat-sekcija {
+    padding: 50px 20px;
+    font-size: 26px;
+  }
+
+  .autor-citata {
+    font-size: 20px;
+  }
+
+
+  /* BEST SELLER */
+
+  .best-seller-sekcija {
+    padding: 50px 15px;
+  }
+
+  .best-seller-content {
+    padding: 10px;
+  }
+
+  .best-seller-content h2 {
+    margin: 20px 5px;
+  }
+
+  .best-seller-content > p {
+    padding: 0 5px;
+  }
+
+  .ponuda-link {
+    font-size: 14px;
+  }
+
+  .svi-best-selleri {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 40px auto;
+  }
+
+  .kartica {
+    height: 480px;
+  }
+
+  /*
+    Na telefonu nema hover-a kao na desktopu.
+    Overlay zato ostaje dostupan i bez miša.
+  */
+
+  .bestseller-overlay {
+    opacity: 1;
+    background: rgba(35, 27, 22, 0.45);
+  }
+
+  .bestseller-info {
+    transform: translateY(0);
+    padding: 25px;
+  }
+
+  .bestseller-info h3 {
+    font-size: 28px;
+  }
+
+  .bestseller-info p {
+    font-size: 14px;
+  }
+
+
+  /* ZAŠTO BAŠ MI */
+
+  .zasto-bas-mi-sekcija {
+    padding: 25px 15px;
+  }
+
+  .zasto-bas-mi-content {
+    padding: 15px 5px;
+  }
+
+  .uvodni-tekst {
+    margin: 20px auto;
+  }
+
+  .zasto-bas-mi-grid {
+    margin: 35px 0;
+  }
+
+  .razlog-kartica {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .naslov-kartice {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .razlog-kartica h3 {
+    font-size: 23px;
+  }
+
+  .razlog-kartica p {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .razlog-kartica .material-symbols-outlined,
+  .razlog-kartica .material-symbols-rounded {
+    font-size: 31px;
+  }
+
+  .zasto-bas-mi-content img {
+    max-height: 400px;
+  }
+
+
+  /* PREPORUKE */
+
+  .preporuke-sekcija {
+    padding: 25px 15px;
+  }
+
+  .preporuke-content {
+    padding: 15px 5px;
+  }
+
+  .preporuke-header h2 {
+    font-size: 31px;
+  }
+
+  .preporuke-header h3 {
+    font-size: 23px;
+  }
+
+  .preporuke-grid {
+    margin-top: 35px;
+  }
+
+  .preporuka {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .zvezdice {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   VEOMA MALI TELEFONI - DO 380px
+========================================= */
+
+@media (max-width: 380px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 29px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+
+  /* HERO */
+
+  .hero-sekcija {
+    min-height: 450px;
+    padding: 20px 10px;
+  }
+
+  .hero-content {
+    padding: 20px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+
+  /* KATEGORIJE */
+
+  .kategorije-sekcija {
+    padding: 40px 10px;
+  }
+
+  .kategorija img {
+    height: 360px;
+  }
+
+  .srpski-naziv {
+    font-size: 20px;
+  }
+
+  .francuski-naziv {
+    font-size: 22px;
+  }
+
+
+  /* O NAMA */
+
+  .o-nama-sekcija {
+    padding: 40px 10px;
+  }
+
+
+  /* CITAT */
+
+  .citat-sekcija {
+    padding: 40px 15px;
+    font-size: 23px;
+  }
+
+  .autor-citata {
+    font-size: 18px;
+  }
+
+
+  /* BEST SELLER */
+
+  .best-seller-sekcija {
+    padding: 40px 10px;
+  }
+
+  .kartica {
+    height: 420px;
+  }
+
+  .bestseller-info {
+    padding: 20px 15px;
+  }
+
+  .bestseller-info h3 {
+    font-size: 25px;
+  }
+
+
+  /* ZAŠTO BAŠ MI */
+
+  .zasto-bas-mi-sekcija {
+    padding: 20px 10px;
+  }
+
+  .razlog-kartica h3 {
+    font-size: 21px;
+  }
+
+
+  /* PREPORUKE */
+
+  .preporuke-sekcija {
+    padding: 20px 10px;
+  }
+
+  .preporuke-header h2 {
+    font-size: 28px;
+  }
+
+  .preporuka {
+    padding: 18px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

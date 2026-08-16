@@ -1,46 +1,375 @@
-nav {
-  background-color: #F8F5EF;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav img {
-  height: 180px;
+/* =========================================
+   NAVBAR
+========================================= */
+
+.site-header {
+  position: relative;
+  z-index: 1000;
 }
+
+.navbar {
+  position: relative;
+  min-height: 150px;
+  background-color: #f8f5ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  border-bottom: 1px solid rgba(58, 46, 39, 0.08);
+}
+
+
+/* =========================================
+   LEVA I DESNA STRANA
+========================================= */
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  gap: 55px;
+}
+
+.nav-right {
+  gap: 45px;
+}
+
+
+/* =========================================
+   LINKOVI
+========================================= */
 
 .link {
   position: relative;
-  color: #3A2E27;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #3a2e27;
+
   text-decoration: none;
-  font-size: 18px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
+
 
 .link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0;
   height: 1px;
-  background: #C98A3D;
+  background-color: #c98a3d;
   transition: width 0.3s ease;
 }
 
 .link:hover {
-  color: #C98A3D;
+  color: #c98a3d;
 }
 
 .link:hover::after {
-  color: #C98A3D;
   width: 100%;
 }
 
-.nav-links {
+
+/* =========================================
+   LOGO
+========================================= */
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
   display: flex;
-  justify-content: space-between;;
   align-items: center;
-  text-align: center;
-  list-style: none;
-  width: 60%;
-  margin: 0 auto;
+  justify-content: center;
+}
+
+.header-logo img {
+  display: block;
+
+  width: 210px;
+  height: auto;
 }
 
 
+/* =========================================
+   IKONICE
+========================================= */
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+.nav-icon::after {
+  display: none;
+}
+
+.nav-icon:hover {
+  color: #c98a3d;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+#menu-toggle {
+  display: none;
+}
+
+
+/* =========================================
+   HAMBURGER
+========================================= */
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #3a2e27;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hamburger:hover span {
+  background-color: #c98a3d;
+}
+
+
+/* =========================================
+   MOBILNI MENI
+========================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-left {
+    gap: 35px;
+  }
+
+  .nav-right {
+    gap: 28px;
+  }
+
+  .link {
+    font-size: 15px;
+  }
+
+  .header-logo img {
+    width: 170px;
+  }
+}
+
+
+/* =========================================
+   MANJI TABLETI / VEĆI TELEFONI
+========================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    height: 110px;
+    padding: 0 30px;
+  }
+
+  .nav-left,
+  .nav-right .link:not(.nav-icon) {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 22px;
+  }
+
+  .nav-icon {
+    font-size: 17px;
+  }
+
+  .header-logo img {
+    width: 140px;
+  }
+}
+
+
+/* =========================================
+   MOBILNI TELEFON
+========================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 90px;
+    padding: 0 22px;
+  }
+
+  .header-logo img {
+    width: 120px;
+  }
+
+  .nav-right {
+    gap: 18px;
+  }
+
+  .nav-icon {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    width: 22px;
+    height: 18px;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2px;
+  }
+
+
+  /* =====================================
+     MOBILNI MENU
+  ===================================== */
+
+  .mobile-menu {
+    position: absolute;
+    top: 90px;
+    left: 0;
+
+    width: 100%;
+    background-color: #f8f5ef;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px 30px;
+    gap: 20px;
+    border-top: 1px solid rgba(58, 46, 39, 0.08);
+    box-shadow: 0 8px 20px rgba(58, 46, 39, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  .mobile-menu .link {
+    font-size: 15px;
+
+    width: fit-content;
+  }
+
+
+  /* =====================================
+     OTVARANJE MENIJA
+  ===================================== */
+
+  #menu-toggle:checked ~ .mobile-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+
+  /* =====================================
+     HAMBURGER -> X
+  ===================================== */
+
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}
+
+
+/* =========================================
+   VEOMA MALI TELEFONI
+========================================= */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .header-logo img {
+    width: 100px;
+  }
+
+  .nav-right {
+    gap: 15px;
+  }
+
+  .nav-icon {
+    font-size: 15px;
+  }
+
+  .hamburger {
+    width: 21px;
+  }
+
+  .hamburger span {
+    width: 21px;
+  }
+
+}

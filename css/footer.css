@@ -14,7 +14,78 @@
 .footer-hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0;/* --- RESPONZIVNOST ZA FOOTER --- */
+
+@media (max-width: 992px) {
+  .footer-hero {
+    height: 60vh;
+    padding: 50px;
+  }
+
+  .footer-hero-content h3 {
+    font-size: 40px;
+  }
+
+  .footer-linkovi {
+    padding: 40px 30px;
+  }
+
+  .footer-linkovi-content {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 raspored na tabletima */
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-hero {
+    height: 50vh;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-hero-content {
+    max-width: 100%;
+  }
+
+  .footer-hero-content h3 {
+    font-size: 32px;
+  }
+
+  .footer-linkovi-content {
+    grid-template-columns: 1fr; /* Sve kolone jedna ispod druge na mobilnom */
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-kolona a {
+    width: 100%; /* Da linkovi centrirano lepo reaguju */
+  }
+
+  .footer-kolona h4::after {
+    margin: 10px auto 0 auto; /* Ukoliko želite liniju ispod naslova */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-hero-content h3 {
+    font-size: 28px;
+  }
+
+  .footer-logo img {
+    width: 200px; /* Smanjenje logoa na malim ekranima */
+  }
+
+  .footer-moto {
+    font-size: 18px;
+  }
+}
   background: rgba(35, 27, 22, 0.48);
 }
 
@@ -205,4 +276,77 @@
 
 .footer-bottom a:hover {
   color: #c98a3d;
+}
+
+/* --- RESPONZIVNOST ZA FOOTER --- */
+
+@media (max-width: 992px) {
+  .footer-hero {
+    height: 60vh;
+    padding: 50px;
+  }
+
+  .footer-hero-content h3 {
+    font-size: 40px;
+  }
+
+  .footer-linkovi {
+    padding: 40px 30px;
+  }
+
+  .footer-linkovi-content {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-hero {
+    height: 50vh;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-hero-content {
+    max-width: 100%;
+  }
+
+  .footer-hero-content h3 {
+    font-size: 32px;
+  }
+
+  .footer-linkovi-content {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-kolona a {
+    width: 100%; 
+  }
+
+  .footer-kolona h4::after {
+    margin: 10px auto 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-hero-content h3 {
+    font-size: 28px;
+  }
+
+  .footer-logo img {
+    width: 200px; 
+  }
+
+  .footer-moto {
+    font-size: 18px;
+  }
 }

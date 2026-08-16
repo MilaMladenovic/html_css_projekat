@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+
+/* =========================================
+   OSNOVNI STILOVI
+========================================= */
+
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 48px;
@@ -35,7 +40,10 @@ body {
   line-height: 1.8;
 }
 
-/* KATEGORIJE SEKCIJA */
+
+/* =========================================
+   KATEGORIJE SEKCIJA
+========================================= */
 
 .kategorije-sekcija {
   background-color: #efe7db;
@@ -43,7 +51,9 @@ body {
 }
 
 
-/* UVOD */
+/* =========================================
+   UVOD
+========================================= */
 
 .kategorije-header {
   max-width: 750px;
@@ -63,7 +73,9 @@ body {
 }
 
 
-/* GRID */
+/* =========================================
+   GRID
+========================================= */
 
 .kategorije-grid {
   max-width: 1400px;
@@ -75,66 +87,93 @@ body {
 }
 
 
+/* =========================================
+   KARTICA
+========================================= */
+
 .kategorija-kartica {
   position: relative;
   height: 520px;
   overflow: hidden;
+
   display: block;
+
   color: #f8f5ef;
   text-decoration: none;
+
   border-radius: 3px;
 }
 
 
+/* =========================================
+   SLIKA
+========================================= */
+
 .kategorija-kartica img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   display: block;
+
   transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
+
+/* =========================================
+   OVERLAY
+========================================= */
 
 .kategorija-overlay {
   position: absolute;
   inset: 0;
 
   background:
-    linear-gradient(to top,
+    linear-gradient(
+      to top,
       rgba(35, 27, 22, 0.85) 0%,
       rgba(35, 27, 22, 0.35) 45%,
       rgba(35, 27, 22, 0.05) 100%
     );
 
-  transition:
-    background 0.5s ease;
+  transition: background 0.5s ease;
 }
 
 
+/* =========================================
+   TEKST NA KARTICI
+========================================= */
 
 .kategorija-info {
   position: absolute;
+
   left: 0;
   bottom: 0;
+
   width: 100%;
+
   padding: 45px;
+
   z-index: 2;
 }
 
 
-
 .kategorija-info > span {
   display: block;
+
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
+
   margin-bottom: 8px;
+
   opacity: 0.75;
 }
 
 
-
 .kategorija-info h2 {
   margin: 0 0 12px;
+
   font-size: 42px;
   font-style: normal;
 
@@ -142,50 +181,69 @@ body {
 }
 
 
-
 .kategorija-info p {
   max-width: 500px;
+
   margin: 0 0 22px;
+
   font-family: "Manrope", sans-serif;
   font-size: 15px;
   line-height: 1.7;
+
   color: rgba(248, 245, 239, 0.85);
 }
 
 
+/* =========================================
+   LINK
+========================================= */
+
 .kategorija-link {
   position: relative;
+
   display: inline-flex;
   align-items: center;
+
   gap: 12px;
+
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.5px;
+
   color: #f8f5ef;
 }
-
 
 
 .kategorija-link i {
   transition: transform 0.3s ease;
 }
 
+
 .kategorija-link::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: -5px;
+
   width: 0;
   height: 1px;
+
   background: #c98a3d;
+
   transition: width 0.3s ease;
 }
 
 
+/* =========================================
+   HOVER
+========================================= */
+
 .kategorija-kartica:hover img {
   transform: scale(1.05);
 }
+
 
 .kategorija-kartica:hover .kategorija-overlay {
   background:
@@ -197,40 +255,260 @@ body {
     );
 }
 
+
 .kategorija-kartica:hover .kategorija-link {
   color: #c98a3d;
 }
+
 
 .kategorija-kartica:hover .kategorija-link i {
   transform: translateX(6px);
 }
 
-.kategorija-link:hover::after  {
+
+.kategorija-link:hover::after {
   width: 100%;
 }
 
 
-/* RESPONSIVE
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
   .kategorije-sekcija {
-    padding: 70px 25px;
+    padding: 80px 35px;
   }
+
+
+  .kategorije-header {
+    margin-bottom: 55px;
+  }
+
+
+  .kategorije-header h1 {
+    font-size: 44px;
+  }
+
+
+  .kategorije-header p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
 
   .kategorije-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
+
   .kategorija-kartica {
-    height: 450px;
+    height: 480px;
   }
+
+
+  .kategorija-info {
+    padding: 40px;
+  }
+
+
+  .kategorija-info h2 {
+    font-size: 40px;
+  }
+}
+
+
+/* =========================================
+   MANJI TABLETI / VEĆI TELEFONI
+========================================= */
+
+@media (max-width: 700px) {
+
+  .kategorije-sekcija {
+    padding: 65px 20px;
+  }
+
+
+  .kategorije-header {
+    max-width: 600px;
+    margin-bottom: 45px;
+  }
+
+
+  .kategorije-header h1 {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+  }
+
+
+  .kategorije-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  .kategorije-grid {
+    gap: 20px;
+  }
+
+
+  .kategorija-kartica {
+    height: 430px;
+  }
+
 
   .kategorija-info {
     padding: 30px;
   }
 
-  .kategorija-info h2 {
-    font-size: 36px;
+
+  .kategorija-info > span {
+    font-size: 11px;
   }
-} */
+
+
+  .kategorija-info h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+
+  .kategorija-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+
+  .kategorija-link {
+    font-size: 11px;
+    letter-spacing: 1.3px;
+  }
+}
+
+
+/* =========================================
+   MOBILNI TELEFON
+========================================= */
+
+@media (max-width: 500px) {
+
+  .kategorije-sekcija {
+    padding: 50px 15px;
+  }
+
+
+  .kategorije-header {
+    margin-bottom: 35px;
+  }
+
+
+  .kategorije-header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+  }
+
+
+  .kategorije-header p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+
+  .kategorije-grid {
+    gap: 15px;
+  }
+
+
+  .kategorija-kartica {
+    height: 390px;
+  }
+
+
+  .kategorija-info {
+    padding: 25px;
+  }
+
+
+  .kategorija-info > span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+  }
+
+
+  .kategorija-info h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+
+  .kategorija-info p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 15px;
+  }
+
+
+  .kategorija-link {
+    font-size: 10px;
+    letter-spacing: 1.1px;
+    gap: 8px;
+  }
+
+
+  .kategorija-link i {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   VEOMA MALI TELEFONI
+========================================= */
+
+@media (max-width: 380px) {
+
+  .kategorije-sekcija {
+    padding: 40px 12px;
+  }
+
+
+  .kategorije-header h1 {
+    font-size: 30px;
+  }
+
+
+  .kategorije-header p {
+    font-size: 13px;
+  }
+
+
+  .kategorija-kartica {
+    height: 350px;
+  }
+
+
+  .kategorija-info {
+    padding: 22px;
+  }
+
+
+  .kategorija-info h2 {
+    font-size: 27px;
+  }
+
+
+  .kategorija-info p {
+    font-size: 12px;
+  }
+
+
+  .kategorija-link {
+    font-size: 9px;
+  }
+}

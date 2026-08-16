@@ -35,7 +35,9 @@ body {
   line-height: 1.8;
 }
 
-/* KORPA */
+/* =========================================
+   KORPA
+========================================= */
 
 .korpa-sekcija {
   background-color: #efe7db;
@@ -50,6 +52,10 @@ body {
   background-color: #fcfaf6;
 }
 
+/* =========================================
+   NASLOV
+========================================= */
+
 .korpa-header {
   text-align: center;
   margin-bottom: 60px;
@@ -62,11 +68,15 @@ body {
 }
 
 .korpa-header p {
-  color: #7C6D63;
+  color: #7c6d63;
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* =========================================
+   TABELA
+========================================= */
 
 .korpa-tabela {
   border-top: 1px solid rgba(58, 46, 39, 0.2);
@@ -79,13 +89,17 @@ body {
   align-items: center;
   padding: 20px 10px;
   border-bottom: 1px solid rgba(58, 46, 39, 0.15);
-
 }
+
+/* =========================================
+   PROIZVOD
+========================================= */
 
 .korpa-proizvod {
   display: flex;
   gap: 20px;
   align-items: center;
+  min-width: 0;
 }
 
 .korpa-proizvod img {
@@ -93,6 +107,7 @@ body {
   height: 100px;
   object-fit: cover;
   border-radius: 3px;
+  flex-shrink: 0;
 }
 
 .korpa-proizvod h3 {
@@ -105,13 +120,14 @@ body {
 .korpa-proizvod span {
   font-family: "Manrope", sans-serif;
   font-size: 14px;
-  color: #8B5E34;
+  color: #8b5e34;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-
-/* CENA */
+/* =========================================
+   CENA
+========================================= */
 
 .cena,
 .ukupno {
@@ -123,7 +139,9 @@ body {
   font-weight: 600;
 }
 
-/* KOLICINA */
+/* =========================================
+   KOLIČINA
+========================================= */
 
 .kolicina {
   display: flex;
@@ -154,7 +172,9 @@ body {
   font-size: 14px;
 }
 
-/* BRISANJE */
+/* =========================================
+   BRISANJE
+========================================= */
 
 .obrisi {
   border: none;
@@ -169,7 +189,9 @@ body {
   color: #c98a3d;
 }
 
-/* DONJI DEO */
+/* =========================================
+   DONJI DEO
+========================================= */
 
 .korpa-dno {
   display: flex;
@@ -178,14 +200,18 @@ body {
   margin-top: 50px;
 }
 
-/* NASTAVITE KUPOVINU */
+/* =========================================
+   NASTAVITE KUPOVINU
+========================================= */
 
 .nastavi-kupovinu {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
   color: #3a2e27;
+
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
@@ -198,8 +224,10 @@ body {
   position: absolute;
   left: 0;
   bottom: -5px;
+
   width: 0;
   height: 1px;
+
   background-color: #c98a3d;
   transition: width 0.3s ease;
 }
@@ -212,7 +240,9 @@ body {
   width: 100%;
 }
 
-/* SUMA */
+/* =========================================
+   SUMA
+========================================= */
 
 .korpa-suma {
   text-align: right;
@@ -239,14 +269,18 @@ body {
   font-weight: 600;
 }
 
-/* PORUCI DUGME */
+/* =========================================
+   PORUČI DUGME
+========================================= */
 
 .poruci-dugme {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+
   background-color: #3a2e27;
   color: #f8f5ef;
+
   padding: 15px 25px;
   border-radius: 5px;
 
@@ -272,8 +306,321 @@ body {
 }
 
 
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .korpa-sekcija {
+    padding: 70px 30px;
+  }
+
+  .korpa-content {
+    padding: 45px 35px;
+  }
+
+  .korpa-red {
+    grid-template-columns: 2fr 0.8fr 1fr 0.8fr 30px;
+    gap: 18px;
+  }
+
+  .korpa-proizvod {
+    gap: 15px;
+  }
+
+  .korpa-proizvod img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .korpa-proizvod h3 {
+    font-size: 21px;
+  }
+
+  .korpa-proizvod span {
+    font-size: 12px;
+  }
+
+  .cena,
+  .ukupno {
+    font-size: 13px;
+  }
+
+  .kolicina {
+    gap: 10px;
+  }
+
+}
 
 
+/* =========================================
+   MANJI TABLETI / VEĆI TELEFONI
+========================================= */
+
+@media (max-width: 750px) {
+
+  .korpa-sekcija {
+    padding: 50px 20px;
+  }
+
+  .korpa-content {
+    padding: 40px 25px;
+  }
+
+  .korpa-header {
+    margin-bottom: 40px;
+  }
+
+  .korpa-header h2 {
+    font-size: 40px;
+  }
+
+  .korpa-header p {
+    font-size: 14px;
+  }
 
 
+  /* SKLANJAMO ZAGLAVLJE TABELE */
 
+  .korpa-zaglavlje {
+    display: none;
+  }
+
+
+  /* SVAKI PROIZVOD POSTAJE SVOJ RED */
+
+  .korpa-red {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "proizvod obrisi"
+      "cena ukupno"
+      "kolicina ukupno";
+
+    gap: 15px 20px;
+    padding: 25px 5px;
+  }
+
+
+  .korpa-proizvod {
+    grid-area: proizvod;
+  }
+
+  .korpa-proizvod img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .korpa-proizvod h3 {
+    font-size: 21px;
+  }
+
+
+  .cena {
+    grid-area: cena;
+  }
+
+  .kolicina {
+    grid-area: kolicina;
+  }
+
+  .ukupno {
+    grid-area: ukupno;
+    align-self: center;
+    text-align: right;
+  }
+
+  .obrisi {
+    grid-area: obrisi;
+    align-self: start;
+  }
+
+
+  /* DONJI DEO */
+
+  .korpa-dno {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .nastavi-kupovinu {
+    align-self: flex-start;
+  }
+
+  .korpa-suma {
+    text-align: left;
+  }
+
+  .korpa-suma > div {
+    justify-content: space-between;
+  }
+
+  .poruci-dugme {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+/* =========================================
+   MOBILNI TELEFON
+========================================= */
+
+@media (max-width: 500px) {
+
+  .korpa-sekcija {
+    padding: 35px 12px;
+  }
+
+  .korpa-content {
+    padding: 30px 18px;
+  }
+
+  .korpa-header {
+    margin-bottom: 30px;
+  }
+
+  .korpa-header h2 {
+    font-size: 34px;
+    letter-spacing: 1.5px;
+  }
+
+  .korpa-header p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  .korpa-red {
+    padding: 22px 0;
+    gap: 12px 15px;
+  }
+
+
+  .korpa-proizvod {
+    gap: 12px;
+  }
+
+  .korpa-proizvod img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .korpa-proizvod h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .korpa-proizvod span {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+  }
+
+
+  .cena,
+  .ukupno {
+    font-size: 13px;
+  }
+
+  .ukupno {
+    font-size: 14px;
+  }
+
+
+  .kolicina {
+    gap: 8px;
+  }
+
+  .kolicina button {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .kolicina span {
+    font-size: 13px;
+  }
+
+
+  .obrisi {
+    font-size: 15px;
+  }
+
+
+  .korpa-dno {
+    gap: 30px;
+    margin-top: 35px;
+  }
+
+  .nastavi-kupovinu {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
+
+  .korpa-suma > div {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .korpa-suma span {
+    font-size: 12px;
+  }
+
+  .korpa-suma strong {
+    font-size: 28px;
+  }
+
+  .poruci-dugme {
+    padding: 14px 18px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+/* =========================================
+   VEOMA MALI TELEFONI
+========================================= */
+
+@media (max-width: 380px) {
+
+  .korpa-content {
+    padding: 25px 15px;
+  }
+
+  .korpa-header h2 {
+    font-size: 30px;
+  }
+
+  .korpa-proizvod img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .korpa-proizvod h3 {
+    font-size: 16px;
+  }
+
+  .korpa-proizvod span {
+    font-size: 9px;
+  }
+
+  .cena,
+  .ukupno {
+    font-size: 12px;
+  }
+
+  .korpa-suma strong {
+    font-size: 25px;
+  }
+
+  .poruci-dugme {
+    font-size: 9px;
+    padding: 13px 12px;
+  }
+}

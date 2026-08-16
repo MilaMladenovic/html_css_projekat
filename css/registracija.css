@@ -30,24 +30,28 @@ body {
   background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(../images/prijava-registracija.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   font-family: "Manrope", sans-serif;
   color: #3a2e27;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.8;
+  min-height: 100vh;
 }
 
 .prijava-body {
    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(../images/topla-peciva.png) !important;
 }
 
-
 .registracija-section {
   background-color: #efe7dbbf;
   padding: 50px;
-  margin: 200px auto;
+  margin: 40px auto;
   border-radius: 10px;
+  width: 90%;
   max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .registracija-naslov {
@@ -55,6 +59,12 @@ body {
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group {
@@ -62,12 +72,15 @@ body {
   align-items: center;
   background-color: #fff;
   border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 15px;
+  margin: 10px 0;
 }
 
 .input-group i {
   font-size: 20px;
+  color: #8b5e34;
+  min-width: 24px;
+  text-align: center;
 }
 
 .input-group input {
@@ -77,6 +90,10 @@ body {
   border-radius: 5px;
   background-color: #fff;
   flex: 1;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  color: #3a2e27;
+  width: 100%;
 }
 
 .input-group input:focus {
@@ -92,19 +109,21 @@ body {
   margin-left: 10px;
 }
 
-
 .dugme-submit {
   background-color: transparent;
   border: 2px solid #3a2e27;
   color: #3a2e27;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   padding: 12px 36px;
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  max-width: 220px;
 }
 
 .dugme-submit:hover {
@@ -112,6 +131,12 @@ body {
   transform: translateY(-2px);
   color: #f8f5ef;
   border-color: transparent;
+}
+
+.form-container p {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
 }
 
 .prijava-link {
@@ -135,4 +160,77 @@ body {
 .prijava-link:hover::after {
   width: 100%;
   height: 1.5px;
+}
+
+/* ================= RESPONSIVE DESIGN (BREAKPOINTS) ================= */
+
+/* do 1100px – manji laptop/tablet */
+@media (max-width: 1100px) {
+  .registracija-section {
+    max-width: 460px;
+  }
+}
+
+/* do 850px – tablet / veći telefon */
+@media (max-width: 850px) {
+  .registracija-section {
+    padding: 35px 30px;
+    margin: 30px auto;
+  }
+
+  h2, .registracija-naslov {
+    font-size: 40px;
+  }
+}
+
+/* do 600px – telefon */
+@media (max-width: 600px) {
+  .registracija-section {
+    padding: 25px 20px;
+    margin: 20px 15px;
+    width: auto;
+  }
+
+  h2, .registracija-naslov {
+    font-size: 32px;
+  }
+
+  .input-group {
+    padding: 8px 12px;
+    margin: 8px 0;
+  }
+
+  .input-group input {
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+/* do 380px – veoma mali telefoni */
+@media (max-width: 380px) {
+  .registracija-section {
+    padding: 20px 12px;
+    margin: 10px 8px;
+  }
+
+  h2, .registracija-naslov {
+    font-size: 26px;
+  }
+
+  .input-group {
+    padding: 6px 10px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .input-group i {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 15px;
+  }
 }

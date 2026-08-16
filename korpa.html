@@ -31,32 +31,62 @@
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="nav-links">
-          <li><a class="link" href="index.html">Početna</a></li>
-          <li><a class="link" href="proizvodi.html">Ponuda</a></li>
-          <li><a class="link" href="kategorije.html">Kategorije</a></li>
+    <header class="site-header">
+      <nav class="navbar">
+        <!-- HAMBURGER -->
+        <input type="checkbox" id="menu-toggle" />
 
-          <li>
-            <a href="index.html"
-              ><img src="images/logo.png" alt="Baget & Kroasan Logo"
-            /></a>
-          </li>
+        <label for="menu-toggle" class="hamburger" aria-label="Otvori meni">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-          <li><a class="link" href="o-nama.html">O nama</a></li>
-          <li><a class="link" href="kontakt.html">Kontakt</a></li>
-          <li>
-            <a class="link" href="registracija.html"
-              ><i class="fa-solid fa-user"></i
-            ></a>
-          </li>
-          <li>
-            <a class="link" href="korpa.html"
-              ><i class="fa-solid fa-basket-shopping"></i
-            ></a>
-          </li>
-        </ul>
+        <!-- LEVA STRANA -->
+        <div class="nav-left">
+          <a class="link" href="index.html"> Početna </a>
+
+          <a class="link" href="proizvodi.html"> Ponuda </a>
+
+          <a class="link" href="kategorije.html"> Kategorije </a>
+        </div>
+
+        <!-- LOGO -->
+        <a class="header-logo" href="index.html">
+          <img src="images/logo.png" alt="Baget & Kroasan Logo" />
+        </a>
+
+        <!-- DESNA STRANA -->
+        <div class="nav-right">
+          <a class="link" href="o-nama.html"> O nama </a>
+
+          <a class="link" href="kontakt.html"> Kontakt </a>
+
+          <a
+            class="link nav-icon"
+            href="registracija.html"
+            aria-label="Prijava"
+          >
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <a class="link nav-icon" href="korpa.html" aria-label="Korpa">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </a>
+        </div>
+
+        <!-- MOBILNI MENI -->
+        <div class="mobile-menu">
+          <a class="link" href="index.html"> Početna </a>
+
+          <a class="link" href="proizvodi.html"> Ponuda </a>
+
+          <a class="link" href="kategorije.html"> Kategorije </a>
+
+          <a class="link" href="o-nama.html"> O nama </a>
+
+          <a class="link" href="kontakt.html"> Kontakt </a>
+        </div>
       </nav>
     </header>
 

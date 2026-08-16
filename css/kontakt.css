@@ -35,47 +35,44 @@ body {
   line-height: 1.8;
 }
 
-
+/* KONTAKT HERO */
 .kontakt-hero {
-  height: 90vh;
+  min-height: 90vh;
   display: grid;
-  grid-template-columns: 800px 1fr;
+  grid-template-columns: 1fr 1fr;
   color: #f8f5ef;
   overflow: hidden;
 }
 
 .kontakt-hero img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
 .kontakt-hero-content {
-  background-color: #8B5E34;
+  background-color: #8b5e34;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 40px;
 }
 
 .kontakt-hero-content h1 {
-  margin-bottom: 15px;
-  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 25px;
   font-size: 64px;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1;
 }
 
 .kontakt-hero-content p {
-  font-family: "Manrope", sans-serif;
   font-size: 17px;
   line-height: 1.7;
   color: rgba(248, 245, 239, 0.9);
   max-width: 450px;
 }
 
+/* KONTAKT SEKCIJA */
 .kontakt-sekcija {
   background-color: #efe7db;
   padding: 150px 60px 120px;
@@ -120,21 +117,12 @@ body {
   align-items: start;
 }
 
-
-.kontakt-info {
-  padding: 20px 0;
-}
-
 .kontakt-blok {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 25px 0;
   border-bottom: 1px solid rgba(58, 46, 39, 0.15);
-}
-
-.kontakt-blok:first-child {
-  padding-top: 0;
 }
 
 .kontakt-blok i {
@@ -144,230 +132,104 @@ body {
   margin-top: 5px;
 }
 
-.kontakt-blok h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-
-.kontakt-blok p {
-  font-size: 14px;
-  color: #7c6d63;
-  line-height: 1.7;
-}
-
-.kontakt-drustvene-mreze {
-  margin-top: 40px;
-}
-
-.kontakt-drustvene-mreze > p {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.kontakt-drustvene-mreze div {
-  display: flex;
-  gap: 15px;
-}
-
-.kontakt-drustvene-mreze a {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(58, 46, 39, 0.25);
-  border-radius: 50%;
-
-  color: #3a2e27;
-  text-decoration: none;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.kontakt-drustvene-mreze a:hover {
-  background-color: #3a2e27;
-  color: #f8f5ef;
-  transform: translateY(-3px);
-}
-
-
-
 .kontakt-forma {
   background-color: #fcfaf6;
   padding: 50px;
   border-radius: 3px;
 }
-
-.kontakt-forma h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 42px;
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 5px;
-}
-
-.kontakt-forma > p {
-  font-size: 14px;
-  color: #7c6d63;
-  margin-bottom: 35px;
-}
-
-
 .forma-red {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
-
 .forma-polje {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
 }
-
-.forma-polje label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  margin-bottom: 8px;
-}
-
 .forma-polje input,
 .forma-polje textarea {
   width: 100%;
-
   border: none;
   border-bottom: 1px solid rgba(58, 46, 39, 0.3);
-
   background-color: transparent;
-
   padding: 12px 5px;
-
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   color: #3a2e27;
-
   outline: none;
-
-  transition: border-color 0.3s ease;
 }
-
-.forma-polje textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-.forma-polje input::placeholder,
-.forma-polje textarea::placeholder {
-  color: #a59b94;
-}
-
-.forma-polje input:focus,
-.forma-polje textarea:focus {
-  border-color: #c98a3d;
-}
-
-
-
 .kontakt-dugme {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-
   background-color: #3a2e27;
   border: none;
-
   color: #f8f5ef;
-
   padding: 14px 25px;
-
-  font-family: "Manrope", sans-serif;
-  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 1.5px;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
 }
 
-.kontakt-dugme i {
-  transition: transform 0.3s ease;
-}
+/* ================= RESPONSIVE DESIGN ================= */
 
-.kontakt-dugme:hover {
-  background-color: #8b5e34;
-  transform: translateY(-2px);
-}
-
-.kontakt-dugme:hover i {
-  transform: translateX(5px);
-}
-
-
-/* RESPONSIVE */
-/* 
-@media (max-width: 900px) {
-
-  .kontakt-sekcija {
-    padding: 120px 30px 80px;
+@media (max-width: 1100px) {
+  .kontakt-grid {
+    gap: 50px;
   }
+  .kontakt-hero {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media (max-width: 850px) {
   .kontakt-header h1 {
     font-size: 58px;
   }
-
+  .kontakt-header p {
+    font-size: 14px;
+  }
   .kontakt-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
   }
-
-  .kontakt-forma {
-    padding: 35px;
+  .kontakt-sekcija {
+    padding: 100px 30px;
   }
 }
 
-
 @media (max-width: 600px) {
-
-  .kontakt-sekcija {
-    padding: 100px 20px 60px;
-  }
-
-  .kontakt-header {
-    margin-bottom: 60px;
-  }
-
   .kontakt-header h1 {
     font-size: 48px;
   }
-
+  .kontakt-hero-content h1 {
+    font-size: 48px;
+  }
+  .kontakt-header p {
+    font-size: 14px;
+  }
   .forma-red {
     grid-template-columns: 1fr;
     gap: 0;
   }
-
   .kontakt-forma {
-    padding: 25px;
+    padding: 30px;
   }
+  .kontakt-sekcija {
+    padding: 80px 20px;
+  }
+}
 
-  .kontakt-forma h2 {
+@media (max-width: 380px) {
+  .kontakt-header h1 {
+    font-size: 40px;
+  }
+  .kontakt-header p {
+    font-size: 12px;
+  }
+  .kontakt-forma {
+    padding: 20px;
+  }
+  .kontakt-hero-content {
+    padding: 30px 15px;
+  }
+  .kontakt-hero-content h1 {
     font-size: 36px;
   }
-
-} */
+}
